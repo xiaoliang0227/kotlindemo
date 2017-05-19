@@ -2,9 +2,8 @@ package com.demo.zyl.helloworld
 
 import android.os.AsyncTask
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.support.v7.app.AppCompatActivity
 import android.widget.AdapterView
 import android.widget.Toast
 import com.demo.zyl.helloworld.adapter.PersonListAdapter
@@ -14,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(),
-        View.OnClickListener,
         PersonDataFetchTask.PersonDataFetchTaskCallback {
 
     var adapter: PersonListAdapter? = null
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun addPersonItemClickListener() {
-        person_list.onItemClickListener = AdapterView.OnItemClickListener {
+        person_list.setOnItemClickListener {
             parent, view, position, id ->
             if (null != data) {
                 var person: Person = data!![position]
@@ -48,7 +46,9 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun addBtnTestClickListener() {
-        btn_test.setOnClickListener(this)
+        btn_test.setOnClickListener {
+            btnTextClicked()
+        }
     }
 
     private fun initView() {
@@ -62,14 +62,6 @@ class MainActivity : AppCompatActivity(),
             tv_test.setTextColor(resources.getColor(R.color.colorAccent, theme))
         } else {
             tv_test.setTextColor(resources.getColor(R.color.colorAccent))
-        }
-    }
-
-    override fun onClick(v: View?) {
-        if (v != null) {
-            if (v.id == R.id.btn_test) {
-                btnTextClicked()
-            }
         }
     }
 
