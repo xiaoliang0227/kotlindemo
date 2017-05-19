@@ -15,10 +15,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),
         View.OnClickListener,
-        PersonDataFetchTask.PersonDataFetchTaskCallback,
-        AdapterView.OnItemClickListener {
+        PersonDataFetchTask.PersonDataFetchTaskCallback {
 
-    var adapter:PersonListAdapter? = null
+    var adapter: PersonListAdapter? = null
 
     var data: MutableList<Person>? = null
 
@@ -39,7 +38,13 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun addPersonItemClickListener() {
-        person_list.setOnItemClickListener(this)
+        person_list.onItemClickListener = AdapterView.OnItemClickListener {
+            parent, view, position, id ->
+            if (null != data) {
+                var person: Person = data!![position]
+                Toast.makeText(this, person.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun addBtnTestClickListener() {
@@ -51,8 +56,8 @@ class MainActivity : AppCompatActivity(),
     }
 
     private fun initTvTest() {
-        tv_test.setText(R.string.tv_test)
-        tv_test.setTextSize(20.0f)
+        tv_test.text = resources.getText(R.string.tv_test)
+        tv_test.textSize = 20.0f
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             tv_test.setTextColor(resources.getColor(R.color.colorAccent, theme))
         } else {
@@ -83,30 +88,5 @@ class MainActivity : AppCompatActivity(),
             adapter = PersonListAdapter(this, data)
             person_list.adapter = adapter
         }
-    }
-
-    /**
-     * Callback method to be invoked when an item in this AdapterView has
-     * been clicked.
-     *
-     *
-     * Implementers can call getItemAtPosition(position) if they need
-     * to access the data associated with the selected item.
-
-     * @param parent The AdapterView where the click happened.
-     * *
-     * @param view The view within the AdapterView that was clicked (this
-     * *            will be a view provided by the adapter)
-     * *
-     * @param position The position of the view in the adapter.
-     * *
-     * @param id The row id of the item that was clicked.
-     */
-    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        if (null != data) {
-            var person: Person = data!!.get(position)
-            Toast.makeText(this, person.toString(), Toast.LENGTH_SHORT).show()
-        }
-
     }
 }

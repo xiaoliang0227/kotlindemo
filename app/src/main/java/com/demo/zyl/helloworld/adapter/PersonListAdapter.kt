@@ -24,18 +24,18 @@ class PersonListAdapter(var context: Context? = null, var data: List<Person>? = 
             view = LayoutInflater.from(context).inflate(R.layout.person_item, parent, false)
             holder.photo = view.findViewById(R.id.photo) as ImageView?
             holder.name = view.findViewById(R.id.name) as TextView?
-            view.setTag(holder)
+            view.tag = holder
         } else {
-            holder = contentView.getTag() as ViewHolder?
+            holder = contentView.tag as ViewHolder?
             view = contentView
         }
-        var person: Person = data!!.get(position)
-        holder?.name?.setText(person.name)
+        var person: Person = data!![position]
+        holder?.name?.text = person.name
         return view!!
     }
 
     override fun getItem(position: Int): Any? {
-        return if(data == null) null else data!!.get(position)
+        return if(data == null) null else data!![position]
     }
 
     override fun getItemId(position: Int): Long {
