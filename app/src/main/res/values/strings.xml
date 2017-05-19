@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kotlin HelloWorld</string>
+    <string name="tv_test">this is a textview test</string>
+</resources>
