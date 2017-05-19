@@ -9,7 +9,7 @@ import java.lang.Math.random
 /**
  * Created by zhaoyongliang on 2017/5/19.
  */
-class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, MutableList<Person>>() {
+class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, ArrayList<Person>>() {
 
     var loading: ProgressDialog? = null
 
@@ -22,7 +22,7 @@ class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, M
         }
 
 
-    override fun onPostExecute(result: MutableList<Person>?) {
+    override fun onPostExecute(result: ArrayList<Person>?) {
         super.onPostExecute(result)
         if (null != loading) {
             loading!!.dismiss()
@@ -37,8 +37,8 @@ class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, M
         loading = ProgressDialog.show(context, null, "获取数据中，请稍候")
     }
 
-    override fun doInBackground(vararg params: Void?): MutableList<Person> {
-        var data: MutableList<Person> = mutableListOf()
+    override fun doInBackground(vararg params: Void?): ArrayList<Person> {
+        var data: ArrayList<Person> = ArrayList()
         val size:Int = (random() * 20).toInt()
         for (i: Int in 0..size) {
             var item: Person = Person()
@@ -55,6 +55,6 @@ class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, M
         /**
          * return person data
          */
-        fun returnPersonData(data: MutableList<Person>)
+        fun returnPersonData(data: ArrayList<Person>)
     }
 }

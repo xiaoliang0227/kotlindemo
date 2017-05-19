@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(),
     /**
      * return person data
      */
-    override fun returnPersonData(data: MutableList<Person>) {
+    override fun returnPersonData(data: ArrayList<Person>) {
         if (null != data) {
             this.data = data
             adapter = PersonListAdapter(this, data)
