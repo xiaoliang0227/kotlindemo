@@ -41,9 +41,9 @@ class PersonDataFetchTask(var context: Context? = null): AsyncTask<Void, Void, A
         var data: ArrayList<Person> = ArrayList()
         val size:Int = (random() * 20).toInt()
         for (i: Int in 0..size) {
-            var item: Person = Person()
-            item.name = "测试" + (i + 1)
-            item.age = (random() * 10).toInt() + 20
+            val name = "测试" + (i + 1)
+            val age = (random() * 10).toInt() + 20
+            var item: Person = Person(name, age)
             data!!.add(item)
         }
         Thread.sleep(3000)

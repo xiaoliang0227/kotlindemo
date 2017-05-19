@@ -6,7 +6,7 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.0.0-alpha1"
-    timestamp="1495185258380"
+    timestamp="1495186253527"
     token="-2488275011797843378"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,19 +23,12 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/outputs/apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
-
     <build
         build-mode="FULL"
-        timestamp="1495185110873"
+        timestamp="1495186205703"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -44,25 +37,28 @@
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/outputs/apk/debug/app-debug.apk"
@@ -70,11 +66,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1495185258380"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
+        timestamp="1495186253527"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
