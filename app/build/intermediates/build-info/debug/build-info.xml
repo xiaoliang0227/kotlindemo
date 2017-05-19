@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="CLASS_ADDED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.0-alpha1"
-    timestamp="1495186807574"
+    timestamp="1495188055004"
     token="-2488275011797843378"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="16" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="57" />
+        duration="20" />
     <task
         name="verifier"
-        duration="9" />
+        duration="5" />
 
     <artifact
         location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -75,7 +75,19 @@
     <build
         build-mode="COLD"
         ir-eligibility="CLASS_ADDED"
-        timestamp="1495186807574"
+        timestamp="1495188000055"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1495188055004"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/split-apk/debug/slices/slice_9.apk"

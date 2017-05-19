@@ -136,6 +136,10 @@
         "source": "/Users/zhaoyongliang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/2b58aad969d99b3a7343a2dd8d131ae6/res/layout/notification_template_lines_media.xml"
     },
     {
+        "merged": "/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/res/merged/debug/layout/act_person_detail.xml",
+        "source": "/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/src/main/res/layout/act_person_detail.xml"
+    },
+    {
         "merged": "/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
         "source": "/Users/zhaoyongliang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/2b58aad969d99b3a7343a2dd8d131ae6/res/layout/abc_alert_dialog_title_material.xml"
     },

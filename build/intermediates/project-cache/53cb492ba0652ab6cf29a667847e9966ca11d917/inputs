@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/Users/zhaoyongliang/workspace/kotlin/HelloWorld/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=15449a48d1297b43a83b12a9d321180404690211
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true

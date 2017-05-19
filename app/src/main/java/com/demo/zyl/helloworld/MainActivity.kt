@@ -1,10 +1,10 @@
 package com.demo.zyl.helloworld
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.AdapterView
 import android.widget.Toast
 import com.demo.zyl.helloworld.adapter.PersonListAdapter
 import com.demo.zyl.helloworld.bean.Person
@@ -40,9 +40,15 @@ class MainActivity : AppCompatActivity(),
             parent, view, position, id ->
             if (null != data) {
                 var person: Person = data!![position]
-                Toast.makeText(this, person.toString(), Toast.LENGTH_SHORT).show()
+                jumpToPersonDetail(person)
             }
         }
+    }
+
+    private fun  jumpToPersonDetail(person: Person) {
+        var intent:Intent = Intent(MainActivity@this, PersonDetailActivity::class.java)
+        intent.putExtra("person", person)
+        startActivity(intent)
     }
 
     private fun addBtnTestClickListener() {

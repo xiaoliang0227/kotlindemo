@@ -21,13 +21,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.demo.zyl.helloworld.MainActivity" >
+        <activity
+            android:name="com.demo.zyl.helloworld.MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.demo.zyl.helloworld.PersonDetailActivity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
